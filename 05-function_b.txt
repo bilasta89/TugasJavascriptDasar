@@ -1,0 +1,94 @@
+//Soal-01
+// Spesifikasi
+/// - 0% pajak apabila $SALARY < Rp 5.000.000
+/// - 5% pajak apabila Rp 5.000.000 <= $SALARY < Rp 10.000.000
+/// - 10% pajak apabila Rp 10.000.000 <= $SALARY < Rp 20.000.000
+/// - 20% pajak apabila Rp 20.000.000 <= $SALARY 
+
+function taxCalc(gaji){
+let pajak = [(20/100),(10/100),(5/100)]
+if (gaji >= 20000000){
+    console.log("salary = " +gaji)
+    console.log("taxCacl "+gaji*pajak[0])
+}else if (gaji >= 10000000 && gaji < 20000000){
+    console.log("salary = " +gaji)
+    console.log("taxCacl "+gaji*pajak[1])
+}else if (gaji >= 5000000 && gaji < 10000000){
+    console.log("salary = " +gaji)
+    console.log("taxCacl "+gaji*pajak[2])
+}else{
+    console.log("salary = " +gaji)
+    console.log("taxCacl = NO")
+}
+}
+
+taxCalc(gaji=300)
+
+-------------
+/// Soal - 02
+/// BMI merupakan sebuah perhitungan yang mana dapat menunjukan apakah seseorang itu masuk dalam kategori obesitas atau tidak. Kamu diminta untuk membuat sebuah fungsi untuk menghitung BMI seseorang serta dapat menentukan apakah orang tersebut obesitas atau tidak.
+
+/// Spesifikasi BMI
+/// - "under weight" apabila $BMI < 18.5
+/// - "normal" apabila 18.5 < $BMI < 24.9
+/// - "over weight" apabila 25 < $BMI < 29.9
+/// - "obese" apabila 30 < $BMI < 34.9
+/// - "extremely obese" apabila 35 < BMI
+
+/// Parameter
+/// - (Number) `height` ⇒ tinggi seseorang (cm)
+/// - (Number) `weight` ⇒ berat badan seseorang (kg) 
+
+/// Return Value
+/// - (String) Indikasi BMI yang didapatkan melalui formula dibawah
+///   (weight/(height^2)) * 10000
+
+function checkBMI(weight,height){
+let BMI = (weight/(height*height))*10000
+if (BMI > 35 ){
+    console.log("Weight " +weight+" kg")
+    console.log("Height " +height+" cm")
+    console.log("BMI is "+BMI+" check BMI should be extremely obese")
+}else if (BMI > 30 && BMI < 34.9  ){
+    console.log("Weight " +weight+" kg")
+    console.log("Height " +height+" kg")
+    console.log("BMI is "+BMI+" check BMI should be obese")
+}else if (BMI > 25  && BMI < 29.9  ){
+    console.log("Weight " +weight+" kg")
+    console.log("Height " +height+" cm")
+    console.log("BMI is "+BMI+" check BMI should be over weight")
+}else if (BMI > 18.5 && BMI < 29.9){
+    console.log("Weight " +weight+" kg")
+    console.log("Height " +height+" cm")
+    console.log("BMI is "+BMI+" check BMI should be normal")
+}else{
+    console.log("Weight " +weight+" kg")
+    console.log("Height " +height+" cm")
+    console.log("BMI is "+BMI+" check BMI should Under Weight")
+}
+}
+
+checkBMI(55,155)
+------------------------------------
+/// Soal - 03
+/// Buatlah sebuah fungsi yang akan merubah huruf pertama disetiap kata menjadi huruf besar
+
+/// Parameter
+/// - (String) sentence => kalimat yang nanti akan diubah
+
+/// Return Value
+/// - (String) kalimat yang sudah kita ubah huruf pertamanya menjadi huruf besar
+
+function ucwords(str) {
+    var splitStr = str.toLowerCase().split(' ');
+    for (var i = 0; i < splitStr.length; i++) {
+        
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+    }
+     
+    console.log(splitStr.join(' ')) 
+ }
+  
+ ucwords("hallo bandung apa kabar kalian ")
+---------------------------------------------------
+

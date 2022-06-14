@@ -1,0 +1,68 @@
+/// Soal - 01
+/// Kamu diminta untuk membuat sebuah perulangan menggunakan for loop, untuk mencetak angka prima dari 1 ~ 100
+/// EDIT HERE
+// for (i=1;i<=20;i++) {
+//     console.log(i)
+//  }
+
+
+ for (i = 1; i <= 100; i++) {
+    let pembagi = 0;
+    for (j = 1; j <= i; j++) {
+    if (i % j == 0) {
+      pembagi++;
+        }
+    
+    }
+    
+    if (pembagi == 2) {
+    
+    console.log(i)
+    
+    }
+    
+    }
+
+/// Soal - 02
+/// Kamu diminta untuk menemukan bilangan prima ke-50
+function bilPrima(){
+for (i = 1; i <= 500; i++) {
+    let pembagi = 0;
+    for (j = 1; j <= i; j++) {
+    if (i % j == 0) {
+      pembagi++;
+        }
+    
+    }
+    
+    if (pembagi == 2) {
+    
+    console.log(i)
+    
+    }
+    
+    }
+}
+
+if (bilPrima = 299){
+    console.log("fiftiethPrime should be 229 "+ bilPrima)
+}
+
+
+//soal - 03
+/// Soal - 03
+/// Kamu diminta untuk menemukan bilangan ganjil ke-50, temukan bilangan tersebut menggunakan do while loop
+function ganjil(){
+let awal=1
+let akhir=100
+while (awal < akhir){
+    if (awal % 2 == 1){
+        console.log(awal)          
+    }
+    awal++
+}
+}
+//ganjil()
+if (ganjil = 99){
+    console.log("fiftiethOdd should be "+ ganjil)
+}
